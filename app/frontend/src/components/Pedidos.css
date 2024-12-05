@@ -1,0 +1,212 @@
+/* Contenedor general */
+.pedidos-ventas-container {
+  display: flex;
+  justify-content: space-between; /* Espacia las secciones de manera equilibrada */
+  /*gap: 30px; /* Espacio entre las secciones */
+  padding: 20px;
+  background-color: #121212; /* Fondo oscuro */
+  align-items: stretch; /* Estira las secciones para que tengan la misma altura */
+}
+
+/* Sección de pedidos */
+.pedidos-section {
+  width: 48%; /* Ancho del 48% para ambas secciones */
+  background-color: #1e1e1e; /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white; /* Texto blanco */
+  margin-right: 2%; /* Margen para separar de la sección de ventas */
+  height: 100%; /* Establece la altura al 100% para que se estire al mismo alto */
+}
+
+/* Sección de ventas */
+.ventas-section {
+  width: 48%; /* Ancho del 48% para ambas secciones */
+  background-color: #1e1e1e; /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white; /* Texto blanco */
+  max-height: 525px;  /* Limita la altura para agregar scroll */
+  overflow-y: scroll; /* Permite desplazamiento vertical */
+  height: 100%; /* Establece la altura al 100% para que se estire al mismo alto */
+}
+
+/* Estilos para los encabezados */
+h2 {
+  color: #00e600; /* Verde brillante para los encabezados */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilos del formulario de pedido */
+select, input[type="number"], button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #333; /* Bordes en gris oscuro */
+  font-size: 16px;
+  width: 100%;
+  color: white; /* Texto blanco */
+  background-color: black; /* Fondo oscuro para entradas y select */
+}
+
+button {
+  background-color: #00e600; /* Verde brillante para los botones */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: #00b300; /* Verde más oscuro para el hover */
+}
+
+
+/* Estilos de las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #1e1e1e; /* Fondo oscuro para la tabla */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #444; /* Bordes suaves en gris oscuro */
+}
+
+th {
+  background-color: #333; /* Fondo oscuro para cabeceras */
+  color: white;
+}
+
+td button {
+  padding: 8px 16px;
+  background-color: #28a745; /* Verde para el botón de aprobar */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+td button:hover {
+  background-color: #218838; /* Verde más oscuro para hover */
+}
+
+td button:last-child {
+  background-color: #dc3545; /* Rojo para el botón de rechazar */
+}
+
+td button:last-child:hover {
+  background-color: #c82333; /* Rojo más oscuro para hover */
+}
+
+/* Estilos de las secciones de pedidos pendientes */
+.pedidos-section select {
+  width: 50%;
+}
+
+.pedidos-section div {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.pedidos-section table, .ventas-section table {
+  border: 1px solid #444; /* Bordes suaves */
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Estilos adicionales para diseño responsive */
+@media (max-width: 768px) {
+  .pedidos-ventas-container {
+    flex-direction: column; /* Se apilan verticalmente en pantallas pequeñas */
+    gap: 20px; /* Espacio entre las secciones */
+  }
+
+  .pedidos-section, .ventas-section {
+    width: 100%; /* 100% de ancho en pantallas pequeñas */
+  }
+
+  input[type="number"] {
+    width: 50%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+/* Estilos para el contenedor de la tabla */
+.tabla-container {
+  max-height: 300px;  /* Limita la altura del contenedor */
+  overflow-y: scroll;   /* Habilita el scroll vertical cuando el contenido sobrepase la altura */
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #1e1e1e; /* Fondo oscuro */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla de productos */
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-productos th,
+.tabla-productos td {
+  padding: 12px;
+  text-align: left;
+  color: #fff;
+}
+
+.tabla-productos th {
+  background-color: #333;
+}
+
+.tabla-productos tr:nth-child(even) {
+  background-color: #444; /* Color alterno para filas */
+}
+
+.tabla-productos tr:hover {
+  background-color: #555; /* Fondo al pasar el mouse */
+}
+
+.tabla-productos input[type="number"] {
+  padding: 5px;
+  width: 60px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+.tabla-productos input[type="number"]:focus {
+  border-color: #00e600; /* Verde al hacer foco */
+}
+
+/* Botón de Confirmar Pedido */
+.btn-confirmar {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00e600;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background-color: #00b300; /* Fondo más oscuro */
+}

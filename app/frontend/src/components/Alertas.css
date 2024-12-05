@@ -1,0 +1,109 @@
+/* Estilo general de la página */
+.alertas-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #5aff9e; /* Color verde claro similar a Kick */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo del formulario más pequeño */
+  .alertas-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .alertas-form input,
+  .alertas-form select,
+  .alertas-form button {
+    margin: 8px 0;  /* Reducir el margen entre los elementos */
+    padding: 8px;   /* Reducir el padding */
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    /*background-color: #333;*/
+    color: white;
+    width: 100%; /* Hacer los inputs más estrechos */
+    max-width: 300px; /* Establecer un tamaño máximo para los inputs */
+  }
+  
+  .alertas-form input:focus,
+  .alertas-form select:focus,
+  .alertas-form button:focus {
+    outline: none;
+    border: 1px solid #5aff9e; /* Color verde claro al enfocar */
+  }
+  
+  /* Estilo del botón siempre en verde */
+  button {
+    background-color: #5aff9e;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #00e600;
+  }
+  
+  /* Estilo de las mesas */
+  .mesas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .mesa {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    color: white; /* Asegura que el texto sea blanco */
+  }
+  
+  .mesa:hover {
+    transform: scale(1.05);
+  }
+  
+  .mesa-nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .mesa-estado {
+    font-size: 1rem;
+  }
+  
+  /* Mesas ocupadas en rojo */
+  .mesa.debe {
+    background-color: #ff4d4d; /* Rojo para 'Ocupado' */
+  }
+  
+  .mesa.pagado {
+    background-color: #5aff9e; /* Verde para 'Disponible' */
+  }
+  
+  .mesa-icono img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  .estado-pagado {
+    background-color: #5aff9e; /* Verde */
+  }
+  .estado-pendiente {
+    background-color: #ffcccb; /* Rojo */
+  }
+  

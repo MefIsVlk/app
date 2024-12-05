@@ -1,0 +1,240 @@
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0e0e10; /* Fondo oscuro */
+  color: #d1d1d1; /* Texto en gris claro */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Centrar contenido al ingresar código de mesa */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-content {
+  background-color: #1e1e23; /* Fondo de la tarjeta */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+input.form-control,
+button {
+  border-radius: 5px;
+}
+
+button {
+  background-color: #39d353; /* Verde para botones */
+  color: #0e0e10; /* Texto oscuro */
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #28a745; /* Verde más oscuro al hover */
+}
+
+.btn-success {
+  background-color: #39d353;
+  color: #0e0e10;
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 1px solid #d1d1d1;
+  color: #d1d1d1;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #d1d1d1;
+  color: #0e0e10;
+}
+
+/* Categorías */
+.categories-carousel {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.category-card {
+  width: 150px;
+  padding: 10px;
+  background-color: #2a2a2e; /* Fondo de la categoría */
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  background-color: #39d353; /* Resalta categoría al hover */
+}
+
+.category-card h5 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.category-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Productos */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #2a2a2e; /* Fondo de producto */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 200px;
+}
+
+.product-card h5 {
+  color: #fff;
+}
+
+.product-info p {
+  margin: 5px 0;
+  color: #b3b3b3; /* Texto más claro */
+}
+
+.product-info input {
+  width: 80px;
+  margin: 10px auto 0;
+  text-align: center;
+}
+
+/* Resumen del Pedido */
+.card {
+  background-color: #1e1e23;
+  color: #d1d1d1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.card button {
+  margin-top: 15px;
+}
+
+/* Tabla de Pedidos */
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.table th {
+  background-color: #2a2a2e; /* Fondo de encabezado */
+  color: #fff;
+}
+
+.table td {
+  color: #d1d1d1;
+}
+
+.table .estado {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table .estado.pagado {
+  color: #39d353; /* Verde para pagado */
+}
+
+.table .estado.pendiente {
+  color: #ff4d4d; /* Rojo para pendiente */
+}
+
+/* Modales */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #1e1e23; /* Fondo del modal */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  color: #d1d1d1;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.modal-content button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.modal-content input {
+  margin: 10px 0;
+}
+
+/* QR Image */
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Total a pagar */
+.total-container {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.total-container button {
+  margin-top: 10px;
+}

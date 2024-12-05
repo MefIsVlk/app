@@ -1,0 +1,262 @@
+/* Asegurar que el body tenga desplazamiento cuando sea necesario */
+html, body {
+    height: 100%;   /* La altura total de la ventana */
+    margin: 0;      /* Eliminar márgenes predeterminados */
+    overflow-y: auto; /* Permitir el desplazamiento vertical */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color1);
+    background-color: #F8FFF5; /* Fondo blanco verdoso */
+}
+
+/* Contenedor principal de la página */
+.productos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--color2); /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.0); /* Sombra ligera */
+    border: 1px solid var(--color2); /* Borde definido */
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: 100%; /* Deja que el contenedor ocupe al menos la altura completa de la ventana */
+    padding-bottom: 20px; /* Agregar un pequeño relleno en la parte inferior para el caso en que haya desplazamiento */
+}
+
+/* Contenedor superior (Formulario + Lista de productos) */
+.top-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Formulario para agregar producto */
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los inputs */
+}
+
+.card {
+   /* background: linear-gradient(135deg, var(--color3), var(--color5)); /* Degradado claro */
+    color: var(--color1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1.0); /* Sombra definida */
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto;  /* Deja que el formulario se ajuste al contenido */
+}
+
+/*.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Lista de productos */
+.product-list-container {
+    background-color: var(--color5);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1.0);
+    padding: 20px;
+    flex: 1;
+    position: relative;
+}
+
+/* Estilos adicionales para los elementos de la lista */
+.product-list {
+    margin-bottom: 15px;
+}
+
+.product-item {
+    padding: 10px;
+    border: 2px solid var(--color4);
+    border-radius: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #000000, #13ff00); /* Gradiente dinámico */
+    color: var(--color5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.product-item:hover {
+    background: linear-gradient(to right, var(--color1), var(--color4)); /* Resalte al pasar el cursor */
+    color: var(--color5);
+    transform: translateX(10px);
+}
+
+.product-item::before {
+    content: "🛒";
+    font-size: 1.2rem;
+    margin-right: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.product-item:hover::before {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Selección activa */
+.selected {
+    background-color: var(--color4);
+    color: var(--color5);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+/* Botones con efectos de clic */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.action-buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* Botón verde */
+    color: #fff; /* Texto blanco */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: var(--color1); /* Botón verde más claro */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons button:disabled {
+    background-color: #D8D8D8; /* Gris claro para botones deshabilitados */
+    color: #A0A0A0; /* Texto gris tenue */
+    cursor: not-allowed;
+}
+
+/* Contenedor de la gráfica */
+.chart-container {
+    background-color: var(--color5); /* Fondo blanco brillante */
+    padding: 30px; /* Espaciado alrededor de la gráfica */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 1.0); /* Sombra fuerte */
+    margin-top: 20px; /* Espaciado superior */
+    width: 90%; /* Controla el tamaño de la gráfica */
+    max-width: 800px; /* Máximo tamaño */
+    margin: 20px auto; /* Centrado horizontal */
+}
+
+.chart-container h2 {
+    text-align: center;
+    color: var(--color1);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .productos-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .top-container {
+        flex-direction: column;
+    }
+
+    .form-container, .product-list-container {
+        width: 100%;
+    }
+}
+
+
+/* Paleta de colores basada en la imagen */
+:root {
+    --color1: #00e701; /* Verde brillante */
+    --color2: #000; /* Negro oscuro */
+    --color3: #191b1f; /* Gris muy oscuro */
+    --color4: #fff; /* Gris oscuro */
+    --color5: #171c1e; /* Gris medio */
+
+}
+/* Asegura que los inputs tengan estilos consistentes */
+.form-control-productos {
+    padding: 10px;
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--color1);
+    background-color: var(--color3);
+    width: 100%;
+  }
+  
+  .form-control-productos::placeholder {
+    color: var(--color4);
+  }
+  
+  /* Menú desplegable con estilo consistente */
+  .form-select-productos {
+    padding: 10px;
+    border: 1px solid var(--color4);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--color1);
+    background-color: var(--color3);
+    width: 100%;
+  }
+  
+  /* Botones primarios (Agregar Producto, Agregar Tipo) */
+.btn-success, .btn-primary {
+    background-color: var(--color1); /* Verde brillante */
+    color: var(--color4); /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover para todos los botones */
+.btn:hover {
+    filter: brightness(1.2); /* Hace los colores un poco más claros al pasar el cursor */
+}
+
+/* Botón de eliminar (Eliminar Tipo) */
+.btn-danger {
+    background-color: #ff0000; /* Rojo brillante */
+    color: var(--color4); /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Hover para el botón de eliminar */
+.btn-danger:hover {
+    background-color: #ff4d4d; /* Rojo más claro */
+}
+/* Para navegadores basados en Webkit (Chrome, Safari, Edge, etc.) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,146 @@
+/* Contenedor principal que abarca todo el contenido */
+.inventario-page {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #1a1a2e; /* Fondo general */
+    margin: auto; /* Asegura el centrado horizontal */
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+  }
+  
+  
+  /* Contenedor del formulario y lista */
+  .container-inv {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido dentro del contenedor */
+    justify-content: center;
+    width: 85%; /* Reducimos el ancho para evitar que ocupe demasiado espacio */
+    max-width: 1100px; /* Controla el ancho máximo */
+    text-align: center;
+    padding: 60px;
+    background-color: #24272c; /* Fondo del contenedor */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    margin: auto; /* Asegura que se centre horizontalmente */
+  }
+  .container-inve {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos al inicio del contenedor verticalmente */
+    
+    max-width: 1100px;
+    text-align: center;
+    padding: 30px;
+    background-color: #050505;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    height: auto; /* Asegúrate de que el contenedor pueda expandirse según el contenido */
+    gap: 20px; /* Espacio entre los elementos del contenedor */
+    margin-top: 30px; /* Espacio superior para separar de otros contenidos */
+    margin-bottom: 30px; /* Espacio inferior para separar de contenidos siguientes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: sombra para resaltar el contenedor */
+}
+
+  
+  /* Layout del formulario y la lista */
+  .layout-inv {
+    display: flex;
+    justify-content: space-between; /* Espacia el formulario y la lista */
+    align-items: flex-start; /* Alinea verticalmente al inicio */
+    gap: 40px; /* Espacio entre el formulario y la lista */
+    width: auto; /* Cambia de 100% a auto para que no ocupe más espacio del necesario */
+  }
+  
+  
+  /* Estilo del formulario */
+  .form-inv {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    background-color: #0b0e0f; /* Fondo del formulario */
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .input-inv {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .addButton-inv,
+  .deleteButton-inv {
+    padding: 12px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .addButton-inv {
+    background-color: #00e701;
+  }
+  
+  .addButton-inv:hover {
+    background-color: #02db02;
+  }
+  
+  .deleteButton-inv {
+    background-color: red;
+  }
+  
+  .deleteButton-inv:hover {
+    background-color: darkred;
+  }
+  
+/* Estilo de la lista */
+.listContainer-inv {
+    flex: 3;
+    background-color: #0b0e0f; /* Fondo de la lista */
+    border-radius: 10px;
+    padding: 80px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .productItem-inv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .productItem-inv:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .selectedProduct {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
+  
+  .progressBar-inv {
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Estilo de fuente global */
+  }

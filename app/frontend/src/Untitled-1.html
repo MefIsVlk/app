@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            border: 5px solid black;
+            border-radius: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #e6e6e6;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid black;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: yellow;
+        }
+        .header .title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 24px;
+        }
+        .header .settings {
+            width: 50px;
+            height: 50px;
+            background-color: #666666;
+            border-radius: 50%;
+        }
+        .main {
+            display: flex;
+            flex-grow: 1;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+            border-right: 2px solid black;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 10px;
+            background-color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+        }
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            background-color: #d1e231;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid black;
+        }
+        .top-content div {
+            width: 30%;
+            background-color: white;
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        .bottom-content {
+            flex-grow: 1;
+            background-color: white;
+            border: 2px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="#" alt="Logo">
+            <div class="title">NOMBRE DEL BAR</div>
+            <div class="settings"></div>
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Mesas</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Inventario</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Trabajadores</a></li>
+                    <li><a href="#">Reseñas</a></li>
+                    <li><a href="#">Clientes</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="top-content">
+                    <div>
+                        <p>Productos más vendidos</p>
+                        <!-- Gráfico aquí -->
+                    </div>
+                    <div>
+                        <p>Cantidad de productos</p>
+                        <!-- Gráfico aquí -->
+                    </div>
+                    <div>
+                        <p>Otro gráfico</p>
+                        <!-- Gráfico aquí -->
+                    </div>
+                </div>
+                <div class="bottom-content">
+                    <!-- Contenido adicional aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

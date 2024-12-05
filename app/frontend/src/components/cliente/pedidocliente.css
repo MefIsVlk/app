@@ -1,0 +1,575 @@
+/* Contenedor principal */
+.centerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh; /* Ocupa toda la pantalla */
+  padding: 20px;
+  background-color: #1d1d1d;
+}
+
+/* Contenido central */
+.centerContent {
+  width: 100%;
+  max-width: 350px; /* Ajustar el tamaño del contenido */
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Etiqueta del input */
+#input-label {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  color: #ffffff; 
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Input */
+#input-mesa {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#input-mesa:focus {
+  outline: none;
+  border-color: #00e701;
+  box-shadow: 0 0 8px rgba(26, 231, 26, 0.5);
+}
+
+/* Botón */
+#btn-confirmar-mesa {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px; /* Espaciado hacia el mensaje */
+  background-color: #00e701;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-confirmar-mesa:hover {
+  background-color: #00ff50;
+}
+
+#btn-confirmar-mesa:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(50, 205, 50, 0.5);
+}
+
+/* Mensaje de bienvenida */
+#welcome-message {
+  font-size: 1.1rem; /* Tamaño del texto */
+  font-weight: bold;
+  color: #03cf03; /* Verde agradable */
+  margin-top: 20px;
+  line-height: 1.5; /* Espaciado entre líneas */
+  text-align: center;
+}
+
+/* Títulos y subtítulos del mensaje */
+.welcomeTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #32cd32; /* Verde claro */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stepsTitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #f1c40f; /* Amarillo */
+}
+
+.stepsList {
+  list-style: decimal inside;
+  color: #ffffff;
+  padding: 0;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.stepsList li {
+  margin: 8px 0;
+}
+
+.footerMessage {
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+
+
+/* General */
+.container {
+  padding: 20px;
+  background-color: #1d1d1d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+.header-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+  overflow-x: auto; /* Habilita desplazamiento horizontal */
+  margin: 0 auto; /* Centra la tabla en el contenedor */
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  max-width: 90%; /* Ajusta el ancho máximo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla */
+.table-pedidocliente {
+  width: 100%;
+  min-width: 600px; /* Evita que las columnas se compriman demasiado */
+  border-collapse: collapse;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  font-size: 0.85rem;
+  table-layout: auto;
+}
+
+/* Encabezados */
+.table-pedidocliente thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table-pedidocliente thead th {
+  padding: 6px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Filas */
+.table-pedidocliente tbody tr:nth-child(even) {
+  background-color: #292929;
+}
+
+.table-pedidocliente tbody tr:nth-child(odd) {
+  background-color: #333333;
+}
+
+.table-pedidocliente td {
+  padding: 6px;
+  border: 1px solid #444444;
+  text-align: center;
+  word-wrap: break-word; /* Ajusta texto largo */
+}
+
+/* Filas separadoras de pedidos */
+.table-pedidocliente tbody tr[style] {
+  background-color: #444444 !important;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Estados */
+.estado-pagado {
+  background-color: #a8f0b8;
+}
+
+.estado-pendiente {
+  background-color: #f0b8b8;
+}
+
+/* Botones */
+.table-pedidocliente button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+  white-space: nowrap; /* Evita que el texto del botón se corte */
+}
+
+.table-pedidocliente button:hover {
+  background-color: #ff3333;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Habilita desplazamiento horizontal */
+    padding: 5px;
+  }
+
+  .table-pedidocliente {
+    font-size: 0.75rem; /* Reduce el tamaño de fuente */
+    min-width: 600px; /* Mantiene un ancho mínimo */
+  }
+
+  .table-pedidocliente td,
+  .table-pedidocliente th {
+    padding: 4px;
+  }
+
+  /* Botones ajustados para pantallas pequeñas */
+  .table-pedidocliente button {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    overflow-x: auto; /* Scroll horizontal */
+    max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  }
+
+  .table-pedidocliente {
+    font-size: 0.7rem; /* Reduce el tamaño de fuente */
+    min-width: 600px; /* Asegura que la tabla no se encoja demasiado */
+  }
+
+  .table-pedidocliente td,
+  .table-pedidocliente th {
+    padding: 3px;
+  }
+
+  /* Botones compactos */
+  .table-pedidocliente button {
+    font-size: 0.65rem;
+    padding: 3px 5px;
+  }
+
+  /* Muestra botones siempre visibles */
+  .table-pedidocliente td:last-child {
+    display: block; /* Botón ocupa todo el ancho en celdas pequeñas */
+    text-align: center;
+  }
+}
+
+
+  
+
+
+/* Carrusel de categorías */
+.categories-carousel {
+  display: flex;
+  gap: 15px; /* Espaciado entre tarjetas */
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin; /* Tamaño del scrollbar */
+}
+
+.categories-carousel::-webkit-scrollbar {
+  height: 8px; /* Altura del scrollbar */
+}
+
+.categories-carousel::-webkit-scrollbar-thumb {
+  background: #4CAF50; /* Color del scrollbar */
+  border-radius: 10px;
+}
+
+.category-card {
+  flex: 0 0 20%; /* Ancho dinámico para pantallas grandes */
+  max-width: 20%;
+  background-color: #191b1f;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(74, 241, 8, 0.432);
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(17, 17, 17, 0.2);
+}
+
+.category-img {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Mantiene proporciones */
+  max-height: 120px; /* Limita la altura en pantallas grandes */
+  object-fit: cover; /* Recorta si es necesario */
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Estilo para pantallas medianas */
+@media (max-width: 768px) {
+  .category-card {
+    flex: 0 0 30%; /* Más espacio por tarjeta en pantallas medianas */
+    max-width: 30%;
+  }
+
+  .category-img {
+    max-height: 100px; /* Ajusta la altura de las imágenes */
+  }
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 480px) {
+  .category-card {
+    flex: 0 0 45%; /* Mayor tamaño para pantallas pequeñas */
+    max-width: 45%;
+  }
+
+  .category-img {
+    max-height: 80px; /* Altura menor en pantallas móviles */
+  }
+
+  .categories-carousel {
+    gap: 10px; /* Reduce el espacio entre tarjetas */
+  }
+}
+
+/* Contenedor de productos */
+.products-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no hay espacio */
+  gap: 15px; /* Espaciado horizontal y vertical entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  padding: 20px;
+  margin: 0 auto; /* Centra el contenedor */
+  max-width: 100%; /* Asegura que el contenedor no se desborde */
+}
+
+/* Tarjetas de productos */
+.product-card {
+  background-color: #444444;
+  border-radius: 10px;
+  padding: 15px;
+  width: calc(100% / 4 - 20px); /* Ajusta dinámicamente el ancho en pantallas grandes */
+  max-width: 150px; /* Limita el ancho máximo */
+  min-width: 120px; /* Asegura un tamaño mínimo */
+  text-align: center;
+  overflow: hidden; /* Evita desbordamientos */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que los elementos se distribuyan bien */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px; /* Separación entre cards */
+}
+
+.product-card img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  height: auto; /* Mantiene proporciones */
+  max-height: 120px; /* Limita la altura */
+  border-radius: 5px;
+  object-fit: cover; /* Evita deformación de la imagen */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Efecto de aumento */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Información del producto */
+.product-info {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
+
+.product-info h5 {
+  margin: 5px 0; /* Espaciado uniforme */
+  font-size: 1rem; /* Tamaño de fuente adecuado */
+  white-space: normal; /* Permite que el texto se ajuste a varias líneas */
+  overflow: visible; /* Evita que el contenido se recorte */
+  text-overflow: unset; /* No aplica puntos suspensivos */
+  word-wrap: break-word; /* Permite el salto de línea en palabras largas */
+}
+
+.product-info p {
+  margin-bottom: 12px; /* Espaciado inferior del precio */
+  font-size: 0.9rem; /* Tamaño de fuente reducido */
+}
+
+/* Input específico */
+.product-card input {
+  width: 80%;
+  padding: 8px;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  background-color: #2a2a2a; /* Fondo oscuro */
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card input:focus {
+  outline: none;
+  background-color: #2a2a2a; /* Mantén el fondo oscuro al enfocar */
+  color: white;
+  border-color: #4CAF50; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Sombra de color verde */
+}
+
+/* Estilo para pantallas medianas */
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(100% / 3 - 15px); /* Ajusta dinámicamente el ancho */
+  }
+
+  .product-info p {
+    font-size: 0.85rem; /* Reduce el tamaño del texto */
+  }
+
+  .product-card input {
+    width: 90%; /* Más espacio en pantallas medianas */
+  }
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 480px) {
+  .products-container {
+    flex-direction: row;
+    gap: 10px; /* Reduce el espacio entre tarjetas */
+    justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+  }
+
+  .product-card {
+    width: calc(50% - 10px); /* Dos tarjetas por fila */
+    max-width: 150px;
+  }
+
+  .product-info p {
+    font-size: 0.75rem;
+  }
+
+  .product-card input {
+    width: 100%;
+    padding: 6px;
+    font-size: 1rem;
+  }
+}
+
+/* Resumen del pedido */
+.card.text-center {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  background: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.text-center h3,p{
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Botones de acción */
+.button-verde-cliente {
+  background-color: #00e701;
+  color: black;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-verde-cliente:hover {
+  background-color: #218838;
+}
+
+.button-rojo-cliente {
+  background-color: #dc3545;
+  color: black;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-rojo-cliente:hover {
+  background-color: #c82333;
+}.table-pedidocliente button, .category-card, .product-card {
+  transition: all 0.3s ease;
+}
+
+.table-pedidocliente button:hover, .category-card:hover, .product-card:hover {
+  transform: scale(1.1);
+}
+.table-pedidocliente thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.product-card, .category-card, .card.text-center {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 480px) {
+  .table-pedidocliente button {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  .category-card, .product-card {
+    padding: 15px;
+  }
+}
+.table-pedidocliente tbody tr:hover {
+  background-color: #383838; /* Oscurecer ligeramente la fila al pasar el mouse */
+}
+
+/*seccion de estilos para pasos de pago en espectivo*/
+.efectivo-section {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  color: white;
+  text-align: left;
+}
+
+.efectivo-section h5 {
+  font-size: 1.2rem;
+  color: #03cf03;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.efectivo-section ol {
+  padding-left: 20px;
+}
+
+.efectivo-section li {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+

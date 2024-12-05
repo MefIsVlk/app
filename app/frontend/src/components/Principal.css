@@ -1,0 +1,171 @@
+/* General App Styling */
+.app-container.dark {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #000000; /* Fondo negro */
+  font-family: 'Arial', sans-serif;
+  color: #000; /* Texto blanco */
+}
+
+/* Header Stats Section */
+.header-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.stat-box.dark {
+  flex: 1;
+  background: #333333; /* Fondo gris oscuro */
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffffff; /* Verde Kick */
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #52C41A;
+}
+
+/* Chart Section */
+.chart-section.dark {
+  background-color: #333333; /* Fondo gris oscuro */
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.chart-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* Verde Kick */
+}
+
+/* Popular Stocks Section */
+.stocks-section.dark {
+  background-color: #333333;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.stock-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+}
+
+.stock-item:last-child {
+  border-bottom: none;
+}
+
+.stock-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.stock-value {
+  font-size: 1rem;
+}
+
+.stock-profit {
+  color: #52C41A; /* Verde Kick */
+}
+
+.stock-loss {
+  color: #E53935; /* Rojo */
+}
+
+.view-all {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #52C41A;
+  cursor: pointer;
+}
+
+
+
+
+/* Contenedor principal para los totales */
+.totales-wrapper {
+  display: flex; /* Alinea los contenedores horizontalmente */
+  justify-content: center; /* Centra los contenedores en la pantalla */
+  align-items: center; /* Alinea verticalmente los contenedores */
+  gap: 20px; /* Espaciado entre los contenedores */
+  margin: 10px 0; /* Reduce el margen superior e inferior */
+  padding-top: 10px; /* Espacio adicional arriba del contenedor */
+}
+
+/* Estilos comunes para los contenedores */
+.totales-container {
+  flex: 1; /* Los contenedores ocupan el mismo espacio */
+  padding: 30px 20px;
+  background: linear-gradient(145deg, #141414, #1a1a1d);
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.4),
+              inset -2px -2px 8px rgba(255, 255, 255, 0.05),
+              0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px; /* Limita el ancho del contenedor */
+}
+
+/* Hover effect */
+.totales-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5), 0 -5px 10px rgba(0, 255, 123, 0.3);
+}
+
+/* Estilo específico para el contenedor de ganancias */
+.ganancias {
+  border-left: 5px solid #32e32f; /* Verde brillante */
+}
+
+/* Estilo específico para el contenedor de ventas */
+.ventas {
+  border-left: 5px solid #FFD700; /* Dorado */
+}
+
+/* Título de cada contenedor */
+.totales-container h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #52C41A;
+}
+
+/* Texto de las métricas */
+.totales-container p {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0;
+  color: #e1e1e1;
+}
+
+/* Sección del gráfico */
+.chart-section {
+  margin-top: 10px; /* Reduce el margen superior */
+  padding: 20px;
+  background: linear-gradient(135deg, #0e0e10, #1a1a1d);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.chart-title {
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #32e32f;
+  text-shadow: 0 2px 5px rgba(0, 255, 123, 0.5);
+}

@@ -1,0 +1,1080 @@
+ /* App.css */
+
+ html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1B1B2F; /* Color de fondo más oscuro y moderno */
+  color: #000000; /* Color de texto ligeramente más claro para mejor contraste */
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden; /* Evita el desbordamiento de la ventana */
+}
+.sidebar li:first-child {
+  margin-top: 30px; /* Ajusta este valor según sea necesario */
+}
+
+
+.sidebar {
+  width: 300px; /* Ligero ajuste en el ancho para un diseño más robusto */
+  height: 100vh;
+  background-color: #000000; /* Color más oscuro para un mejor contraste */
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  width: 250px;
+  overflow-y: auto;
+  box-shadow: 6px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra lateral */
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%); /* Hides the sidebar off-screen */
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.sidebar a:hover {
+  background-color: #000000;
+  transform: translateX(5px); /* Añade un sutil movimiento al pasar el mouse */
+}
+.sidebar ul li a:hover span {
+  color: #000000; /* Cambia el color de la letra al pasar el cursor */
+}
+
+.content {
+  margin-left: 260px; /* Ajusta el margen izquierdo para evitar la superposición con la barra lateral */
+  padding: 20px;
+  flex: 1;
+  background-color: #2A2A3E;
+  height: calc(100vh - 20px); /* Asegura que el contenido no se salga de la pantalla */
+  overflow-y: auto; /* Agrega la barra de desplazamiento vertical cuando sea necesario */
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: #292940;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header .title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ADADFF;
+}
+
+.header .btn {
+  padding: 10px 20px;
+  background-color: #4A4A68;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.header .btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.05); /* Añade una ligera ampliación al hover */
+}
+
+.section {
+  display: none;
+}
+
+.active-section {
+  display: block;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ADADFF;
+}
+
+/* Estilos para listas */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.button {
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #4CAF50;
+  transform: translateY(-3px); /* Añade un pequeño movimiento hacia arriba en el hover */
+}
+
+/* Añadido para mejor consistencia visual */
+.container {
+  /*margin: 20px;*/
+  padding: 20px;
+  background-color: #272727; /* Fondo para contenedores */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}/* App.css */
+
+/* Estilo original de los enlaces en la barra lateral */
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Cambio de color a azul oscuro al pasar el cursor */
+.sidebar a:hover {
+  background-color: #171c1e; /* Azul oscuro */
+  transform: translateX(5px); /* Mantiene el movimiento hacia la derecha */
+}
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff; /* Cambiar a un gris más oscuro */
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a:hover {
+  color: rgb(255, 255, 255); /* Un tono ligeramente más claro al pasar el cursor */
+}
+
+.sidebar ul li a i {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #09ff00; /* Ajustar el color del ícono */
+}
+/* card internas de los componentes*/
+/* Estilos CSS */
+.productos-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #2e2e3b;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-title {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.product-list-container {
+  flex-grow: 1;
+}
+
+.product-list {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.product-item {
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.product-item:hover {
+  background-color: #373757;
+}
+
+.selected {
+  background-color: #505078;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+body {
+  background-color: #1e1e2f;
+  font-family: Arial, sans-serif;
+}/* Definimos los estilos para los diferentes estados */
+.mesa-debe {
+  background-color: red;
+  color: white;
+}
+
+.mesa-pago {
+  background-color: green;
+  color: white;
+}
+
+.mesa-libra {
+  background-color: gray;
+  color: white;
+}
+
+
+
+
+.card-title {
+  font-size: 26px;
+  color: #d1d1e0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #444;
+  background-color: #474f54;
+  color: #fff;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+button {
+  background-color: #4e8cfe;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* ajustes de la grafica en principal*/
+.card {
+  background-color: #2c2c37;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+ /*transition: background-color 0.5s ease, color 0.5s ease;*/
+}
+
+.card.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.card-title {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#chart {
+  margin-top: 20px;
+}
+
+#colorSelector {
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #080808;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#colorSelector:hover {
+  background-color: #0056b3;
+}
+.alertas-container {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.alertas-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+/* Css mesas" */
+
+/* Grid principal */
+.mesas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilos de cada mesa */
+.mesa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 12px;
+  width: 130px;
+  height: 130px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animación al hacer hover */
+.mesa:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Sombra animada de resplandor */
+.mesa::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mesa:hover::after {
+  opacity: 1;
+}
+
+/* Icono de la mesa */
+.mesa-icono img {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.mesa:hover .mesa-icono img {
+  transform: scale(1.1);
+}
+
+/* Nombre de la mesa */
+.mesa-nombre {
+  font-size: 17px;
+  color: #ffffff;
+  margin-top: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Estado de la mesa con colores y efectos */
+.mesa-estado {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Color y animación de los estados */
+.debe {
+  background-color: #FF7043; /* Ocupado */
+}
+
+.pagado {
+  background-color: #66BB6A; /* Disponible */
+}
+
+/* Cambio de color al hover del estado */
+.mesa:hover .debe {
+  background-color: #FF5722;
+}
+
+.mesa:hover .pagado {
+  background-color: #4CAF50;
+}
+
+/*adminitrador.css*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #2b2b36;
+  color: #ffffff;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+header h1 {
+  color: #A1A1C1;
+  margin-bottom: 30px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  color: #000000;
+}
+
+.stat-card p {
+  font-size: 18px;
+  color: #000000;
+}
+
+button {
+  background-color: #13ff00;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000000;
+}
+
+button.resumen {
+  background-color: #2ECC71;
+}
+
+button.edit {
+  background-color: #F39C12;
+}
+
+button.delete {
+  background-color: #E74C3C;
+}
+
+button.add-caja {
+  background-color: #2ECC71;
+  width: 10%;
+  margin-top: 50px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.cajas-section {
+  margin-top: 30px;
+}
+
+.caja-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.caja-card {
+  background-color: #2D2D3A;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caja-card h3 {
+  color: #A1A1C1;
+}
+
+.caja-card p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #323244;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.back-arrow {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #B8BEDD;
+  transition: color 0.3s ease;
+}
+
+.back-arrow:hover {
+  color: #4A90E2;
+}
+
+/* Contenedor principal del componente Cliente */
+.cliente-container {
+   margin-top: 50px;
+color: #fff;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  width: 100%; /* Ajusta el ancho relativo */
+  min-height: 400px; /* Asegura un mínimo de altura */
+  max-height: 90vh; /* Limita la altura al 90% de la ventana */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 20px;
+  background-color: #000; /* Color de fondo neutro */
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Añade sombra */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow-y: auto; /* Permite scroll si el contenido supera la altura */
+}
+
+
+/* Barra de navegación para las categorías de productos */
+.nav-card {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 8px;
+}
+
+.nav-bar button {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-bar button:hover {
+  background-color: #e0e0e0;
+}
+
+.nav-bar button:focus {
+  outline: none;
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+/* Contenedor de productos tipo carrusel */
+.product-card {
+  width: 30%;
+  display: flex;
+  overflow: hidden; /* Evita el desbordamiento horizontal */
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Hace que el scroll sea suave */
+  -webkit-overflow-scrolling: touch; /* Para scroll fluido en dispositivos táctiles */
+  padding-bottom: 10px; /* Espacio debajo de los elementos */
+}
+
+.product-container::-webkit-scrollbar {
+  display: none; /* Oculta la barra de scroll */
+}
+
+.carousel-item {
+  min-width: 200px; /* Ancho mínimo para cada producto */
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start; /* Hace que cada item se alinee al inicio */
+  transition: transform 0.2s ease;
+}
+
+.carousel-item:hover {
+  transform: translateY(-5px);
+}
+
+.carousel-details h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.carousel-details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.carousel-details input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Resumen del pedido */
+.pedido-resumen {
+  margin-top: 20px;
+  padding: 15px;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pedido-resumen h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #f0f0f0;
+}
+
+.pedido-resumen ul {
+  padding-left: 20px;
+  color: #ffffff;
+}
+
+.pedido-resumen li {
+  margin: 5px 0;
+}
+
+.pedido-resumen button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pedido-resumen button:hover {
+  background-color: #218838;
+}
+
+.pedido-resumen button:focus {
+  outline: none;
+  background-color: #1e7e34;
+}
+
+
+/*principal*/
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* App.css */
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #000;
+}
+/* Card styling */
+.card {
+  background-color: #171c1e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
+  margin-bottom: 20px;
+  color: #fff;
+  /*transition: background-color 0.3s, color 0.3s;*/
+}
+
+.card.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Title Styling */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;  
+  margin-bottom: 10px;
+}
+
+/* Amount Styling */
+.card-amount {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Chart Styling */
+#chart {
+  margin-top: 20px;
+}
+
+/* Button Styling */
+.color-toggle-button {
+  background-color: #6200ea;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.color-toggle-button:hover {
+  background-color: #3700b3;
+}
+
+.color-toggle-button:focus {
+  outline: none;
+}
+
+/* Dark Mode Button Styling */
+.card.dark .color-toggle-button {
+  background-color: #bbb;
+  color: #333;
+}
+
+.card.dark .color-toggle-button:hover {
+  background-color: #888;
+}
+
+/* caja de transaciones */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgb(15, 15, 15);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content button {
+  margin: 10px;
+}
+
+
+
+
+/* src/App.css */
+
+/* Contenedor principal de la aplicación */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+.sidebar.visible {
+  transform: translateX(0);
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  margin-left: 250px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.app.sidebar-hidden .content {
+  margin-left: 0;
+}
+
+
+/* Contenido principal */
+.content {
+  flex-grow: 1;  /* Esto hace que el contenido ocupe todo el espacio restante */
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Cuando la barra lateral está visible, el contenido se mueve a la derecha */
+.content-with-sidebar {
+  margin-left: 0px;  /* Deja espacio para la barra lateral */
+}
+
+/* Cuando la barra lateral está oculta, el contenido ocupa todo el ancho */
+.content-expanded {
+  margin-left: 0; /* Sin margen cuando la barra lateral está oculta */
+}
+
+/* Botón de alternar la visibilidad de la barra lateral */
+.toggle-sidebar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.toggle-sidebar:hover {
+  background-color: #555;
+}
+
+
+/* Contenedor para el interruptor dentro de la aplicación */
+.sidebar-toggle-container {
+  position: absolute;
+  top: 20px;  /* Ajusta la posición vertical del interruptor */
+  left: 20px;  /* Ahora está posicionado a la izquierda */
+  z-index: 10;  /* Asegura que el interruptor esté por encima de otros elementos */
+}
+
+/* Estilo del interruptor */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  animation: toggle__animation 3s infinite;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  filter: blur(20px);
+  z-index: -1;
+  border-radius: 50px;
+  background-color: #00ff08;
+  background-image: radial-gradient(at 21% 46%, rgb(0, 255, 0) 0px, transparent 50%),
+  radial-gradient(at 23% 25%, hsla(359,74%,70%,1) 0px, transparent 50%),
+  radial-gradient(at 20% 1%, hsla(267,83%,75%,1) 0px, transparent 50%),
+  radial-gradient(at 86% 87%, hsla(204,69%,68%,1) 0px, transparent 50%),
+  radial-gradient(at 99% 41%, hsla(171,72%,77%,1) 0px, transparent 50%),
+  radial-gradient(at 55% 24%, hsla(138,60%,62%,1) 0px, transparent 50%);
+}
+
+/* Estilo del interruptor */
+.switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fdfefedc;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.3em;
+  bottom: 0.35em;
+  transition: .4s;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -10px 10px 0px inset,
+    rgba(0, 0, 0, 0.09) 0px -1px 15px -8px;
+  background-color: #1dbf73;
+  background-image: radial-gradient(at 81% 39%, rgb(26, 239, 47) 0px, transparent 50%),
+  radial-gradient(at 11% 72%, rgb(26, 239, 47) 0px, transparent 50%),
+  radial-gradient(at 23% 20%, #00ff26 0px, transparent 50%);
+}
+
+.input__check:checked + .slider {
+  background-color: #17202A;
+}
+
+.input__check:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+@keyframes toggle__animation {
+  0%, 100% {
+    transform: translateY(-10px) rotateX(15deg) rotateY(-20deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotateX(15deg) rotateY(-20deg);
+  }
+}
+
+
